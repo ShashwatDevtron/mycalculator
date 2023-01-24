@@ -103,14 +103,3 @@ function App() {
 }
 
 export default App;
-/*
-<div className="operators">
-          <button onClick={setAC}>AC</button>
-           <button onClick={() => updateCalc('/')}>/</button>
-           <button onClick={() => updateCalc('*')}>*</button>
-           <button onClick={() => updateCalc('+')}>+</button>
-           <button onClick={() => updateCalc('-')}>-</button>
-           <button onClick={deleteLast}>DEL</button>
-         </div>
-
-*/
