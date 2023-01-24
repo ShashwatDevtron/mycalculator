@@ -15,10 +15,19 @@ function App() {
     ){
       return;
     }
-    setCalc(calc + value)
+    if (calc === '0')
+      setCalc(value)
+    else if (calc.slice(-1) === '0' && ops.includes(calc.slice(-2,-1)))
+      setCalc(calc.slice(0,-1) + value)
+    else
+      setCalc(calc + value)
 
     if(!ops.includes(value)){
-         setResult(eval(calc + value).toString());
+      if (calc === '0') 
+        setResult(eval(value).toString())
+      else if (calc.slice(-1) === '0' && ops.includes(calc.slice(-2,-1)))
+      setResult(eval(calc.slice(0,-1) + value).toString());
+      else setResult(eval(calc + value).toString());
     }
   }
 
