@@ -47,9 +47,12 @@ function App() {
   }
 
     
+  const setAC = () =>{
+    const value = "";
+    setCalc(value)
+    setResult(value)
+  }
   
-
-
 
 
 
@@ -64,20 +67,34 @@ function App() {
            { calc || "0" }
          </div>
 
+
          <div className="operators">
-           <button onClick={() => updateCalc('/')}>/</button>
-           <button onClick={() => updateCalc('*')}>*</button>
-           <button onClick={() => updateCalc('+')}>+</button>
-           <button onClick={() => updateCalc('-')}>-</button>
-           <button onClick={deleteLast}>DEL</button>
+          <button onClick={setAC}>AC</button>
+          <button onClick={deleteLast}>DEL</button>
+          <button onClick={() => updateCalc('%')}>%</button>
+           <button onClick={() => updateCalc('/')}>/</button>           
          </div>
 
-         <div className="digits">
-            { createDigits() }
-            <button onClick={() => updateCalc('0')}>0</button>
-            <button onClick={() => updateCalc('.')}>.</button>
-            <button onClick={calculate}>=</button>
+
+         <div className="digitsAndOperators">
+
+         <div className="digits">          
+          { createDigits() }
+          <button></button>
+          <button onClick={() => updateCalc('0')}>0</button>
+          <button onClick={() => updateCalc('.')}>.</button>
          </div>
+
+         <div className="operatorss">   
+           <button onClick={() => updateCalc('*')}>*</button>
+           <button onClick={() => updateCalc('-')}>-</button>
+           <button onClick={() => updateCalc('+')}>+</button>
+           <button onClick={calculate}>=</button>
+           </div>
+          
+         </div>
+         
+         
 
        </div>
 
@@ -86,3 +103,14 @@ function App() {
 }
 
 export default App;
+/*
+<div className="operators">
+          <button onClick={setAC}>AC</button>
+           <button onClick={() => updateCalc('/')}>/</button>
+           <button onClick={() => updateCalc('*')}>*</button>
+           <button onClick={() => updateCalc('+')}>+</button>
+           <button onClick={() => updateCalc('-')}>-</button>
+           <button onClick={deleteLast}>DEL</button>
+         </div>
+
+*/

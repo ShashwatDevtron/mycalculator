@@ -82,3 +82,13 @@ button:hover{
   max-width: 33.333%;
   background-color: var(--dark);
 }
+
+.digitsAndOperators{
+  display:flex;
+}
+
+.operatorss button{
+  width: 100%;
+  background-color: var(--primary);
+  font-weight: 700;
+}
