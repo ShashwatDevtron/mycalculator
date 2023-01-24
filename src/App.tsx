@@ -5,7 +5,7 @@ function App() {
 
   const[calc, setCalc] = useState("")
   const[result, setResult] = useState("");
-  const ops = ['/', '*', '+', '-', '.'];
+  const ops = ['/', '*', '+', '-', '.','%'];
 
 
   const updateCalc = (value: string) => {
